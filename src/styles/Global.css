@@ -1,0 +1,36 @@
+/* src/styles/Global.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fafe;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #0a58ca;
+}
+
+a:hover {
+  color: #ff6b6b;
+}
+
+h1, h2, h3 {
+  color: #0a58ca;
+}
+
+button, .cta-button {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .cta-button:hover {
+  background-color: #e24747;
+}
