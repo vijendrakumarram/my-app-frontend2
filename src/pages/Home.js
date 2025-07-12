@@ -1,6 +1,7 @@
 // src/pages/Home.js
 import React from 'react';
 import '../styles/Home.css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
         <div className="hero-content">
           <h1>Welcome to Digital World</h1>
           <p>We build creative websites, apps, and digital experiences that matter.</p>
-          <a href="/contact" className="cta-button">Get in Touch</a>
+          <Link to="/contact" className="cta-button">Get in Touch</Link>
         </div>
       </div>
 
