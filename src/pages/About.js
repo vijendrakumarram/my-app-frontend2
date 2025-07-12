@@ -1,6 +1,7 @@
 // src/pages/About.js
 import React from 'react';
 import '../styles/About.css';
+import vijendraPhoto from '../assets/vijendra.jpg'; // ✅ add this line
 
 const About = () => {
   return (
@@ -43,19 +44,9 @@ const About = () => {
         <h2>Meet the Team</h2>
         <div className="team-container">
           <div className="team-card">
-            <p>John</p>
-            <h3>John Doe</h3>
+            <img src={vijendraPhoto} alt="Vijendra Kumar" className="team-photo" /> {/* ✅ Image added */}
+            <h3>Vijendra Kumar</h3>
             <p>Lead Developer</p>
-          </div>
-          <div className="team-card">
-            <p>Jane</p>
-            <h3>Jane Smith</h3>
-            <p>UI/UX Designer</p>
-          </div>
-          <div className="team-card">
-            <p>Mike</p>
-            <h3>Mike Johnson</h3>
-            <p>Project Manager</p>
           </div>
         </div>
       </section>

@@ -26,10 +26,7 @@ const Services = () => {
           <h3>⚙️ Custom Software</h3>
           <p>End-to-end software solutions tailored to your business logic and goals.</p>
         </div>
-        <div className="service-card">
-          <h3>📈 SEO & Marketing</h3>
-          <p>Rank higher on Google, attract more users, and grow your audience with our strategies.</p>
-        </div>
+
       </div>
     </div>
   );
