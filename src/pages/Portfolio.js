@@ -1,28 +1,31 @@
-// src/pages/Portfolio.js
 import React from 'react';
 import '../styles/Portfolio.css';
 
 const Portfolio = () => {
-  const projects = [
-    {
-      title: 'Train Simulator',
-      description: 'A 3D train simulation built with Unity for enterprise training and interactive demos.',
-      video: 'https://www.youtube.com/embed/_v7Bt0jJSxo'
-    },
-    {
-      title: 'Tractor Simulator', 
-      description: 'Tractor Simulator is a realistic farming game where you drive tractors to plow fields, plant seeds, and harvest crops.',
-      video: 'https://youtu.be/3J-Y5bB6vO0?si=Hd7GxIWzZhcUk2-6'
-    },
-    {
-      title: '🛍️ E-Commerce App',
-      description: 'A mobile-first e-commerce application with secure payment integration, user profiles, and dynamic product listings.'
-    },
-    {
-      title: '📊 Project D',
-      description: 'Data dashboard for analytics'
-    }
-  ];
+const projects = [
+  {
+    title: 'Train Simulator',
+    description: 'A realistic 3D train simulator built with Unity, designed for enterprise training and immersive interactive experiences.',
+    video: 'https://www.youtube.com/embed/_v7Bt0jJSxo'
+  },
+  {
+    title: 'Tractor Simulator',
+    description: 'A realistic 3D farming simulator where players drive tractors to plow fields, plant crops, and manage agricultural tasks.',
+    video: 'https://www.youtube.com/embed/YiWx7XSGnYA'
+  },
+  {
+    title: 'Flight Simulator',
+    description: 'A high-fidelity 3D flight simulation experience featuring takeoff, landing, and in-air navigation using realistic aircraft physics.',
+    video: 'https://www.youtube.com/embed/RmnS7ToFECc'
+  },
+  {
+    title: 'Edverse Metaverse',
+    description: 'A 3D metaverse app for virtual education, training, and collaboration in immersive environments.',
+    video: 'https://www.youtube.com/embed/5NRsN7OY3cg'
+  }
+];
+
+
 
   return (
     <div className="portfolio-container">
