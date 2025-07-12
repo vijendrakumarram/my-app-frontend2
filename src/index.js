@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 // Ping the backend server
-fetch('http://localhost:5000/')
+//fetch('http://localhost:5000/')
+
+fetch('https://my-app-backend-5n6c.onrender.com/')
   .then((response) => {
     if (response.ok) {
       ReactDOM.render(<App />, document.getElementById('root'));
