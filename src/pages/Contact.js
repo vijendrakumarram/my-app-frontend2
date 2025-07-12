@@ -10,16 +10,38 @@ const Contact = () => {
     message: '',
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
-    alert("Thank you for contacting us!");
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setLoading(true);
+    
+    try {
+      const response = await fetch('https://my-app-backend-5n6c.onrender.com/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert('✅ Message sent successfully!');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        alert('❌ Failed to send message. Try again later.');
+      }
+    } catch (error) {
+      console.error('❌ Error:', error);
+      alert('❌ Server error. Please try again later.');
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -64,12 +86,14 @@ const Contact = () => {
           required
         />
 
-        <button type="submit">Send Message</button>
+        <button type="submit" disabled={loading}>
+          {loading ? 'Sending...' : 'Send Message'}
+        </button>
       </form>
 
       <ul className="contact-info">
-        <li>📧 Email: vijendrakumarram@gmail.com</li>
-        <li>📞 Phone: +91-8107819076</li>
+        <li>📧 Email: info@yourdomain.com</li>
+        <li>📞 Phone: +91-9876543210</li>
         <li>📍 Location: Jaipur, India</li>
       </ul>
     </div>
