@@ -92,8 +92,8 @@ const Contact = () => {
       </form>
 
       <ul className="contact-info">
-        <li>📧 Email: info@yourdomain.com</li>
-        <li>📞 Phone: +91-9876543210</li>
+        <li>📧 Email: vijendrakumarram@gmail.com</li>
+        <li>📞 Phone: +91-8107819076</li>
         <li>📍 Location: Jaipur, India</li>
       </ul>
     </div>
