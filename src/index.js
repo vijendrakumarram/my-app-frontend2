@@ -4,8 +4,9 @@ import App from './App';
 
 // Ping the backend server
 //fetch('http://localhost:5000/')
+//https://my-app-backend-5n6c.onrender.com
 
-fetch('https://my-app-backend-5n6c.onrender.com/')
+fetch('https://my-app-backend-62bz.onrender.com/')
   .then((response) => {
     if (response.ok) {
       ReactDOM.render(<App />, document.getElementById('root'));
