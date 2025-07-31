@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import API_BASE_URL from "../api/apiConfig";
 
 const Contact = () => {
@@ -9,6 +9,12 @@ const Contact = () => {
     message: '',
   });
 
+ // ✅ Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+ 
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
