@@ -1,0 +1,1 @@
+export default function Team() { return <div className='p-6'>Our Team Page</div>; }
