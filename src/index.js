@@ -2,30 +2,31 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./styles/output.css";
+import BASE_URL from "./api/apiConfig";
 
-/*
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-*/
 
-//fetch('https://my-app-backend-62bz.onrender.com/')
-fetch('http://localhost:5000/')
+fetch(`${BASE_URL}/`)
   .then((response) => {
     if (response.ok) {
-      ReactDOM.render(<App />, document.getElementById('root'));
+      root.render(
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      );
     } else {
-      throw new Error('Backend not responding');
+      return response.text().then(text => {
+        throw new Error(`Status ${response.status}: ${text}`);
+      });
     }
   })
   .catch((error) => {
-    console.error(error);
+    console.error("⚠️ Backend Connection Error:", error.message);
     document.body.innerHTML = `
       <div style="text-align:center; margin-top: 100px; font-size: 24px; color: red;">
-        ❌ Backend server is not running. Please start it first.
+        ❌ Backend server is not running or unreachable.<br>
+        ${error.message}
       </div>
     `;
   });
+

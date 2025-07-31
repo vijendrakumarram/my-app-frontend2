@@ -1,5 +1,5 @@
-// src/pages/Contact.js
 import React, { useState } from 'react';
+import API_BASE_URL from "../api/apiConfig";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      const response = await fetch('https://my-app-backend-62bz.onrender.com/api/contact', {
+      const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
