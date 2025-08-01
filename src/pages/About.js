@@ -1,18 +1,22 @@
 import React from 'react';
+import { FaLightbulb, FaCheckCircle, FaUsers } from 'react-icons/fa'; // Added icons
 
 const About = () => {
   const values = [
     {
       title: 'Innovation',
       desc: 'We constantly explore new ideas to deliver the best digital solutions.',
+      icon: <FaLightbulb className="text-yellow-500 text-4xl mb-4 mx-auto" />,
     },
     {
       title: 'Quality',
       desc: 'We focus on clean code, modern design, and high-performance apps.',
+      icon: <FaCheckCircle className="text-green-500 text-4xl mb-4 mx-auto" />,
     },
     {
       title: 'Collaboration',
       desc: 'We work closely with our clients to understand and deliver their vision.',
+      icon: <FaUsers className="text-blue-500 text-4xl mb-4 mx-auto" />,
     },
   ];
 
@@ -64,7 +68,8 @@ const About = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {values.map((item, i) => (
             <div key={i} className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition duration-300">
-              <h3 className="text-xl font-semibold text-blue-800 mb-3">{item.title}</h3>
+              {item.icon}
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">{item.title}</h3>
               <p className="text-sm text-gray-600">{item.desc}</p>
             </div>
           ))}

@@ -16,7 +16,7 @@ function LayoutWrapper() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {!isAuthPage && <Navbar />}
+      {/*!isAuthPage && */<Navbar />}
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
