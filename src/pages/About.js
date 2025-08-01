@@ -23,7 +23,7 @@ const About = () => {
       image: '/assets/vijendra.jpg',
     },
     {
-      name: 'Narotham Char',
+      name: 'Narotam Chahar',
       role: 'Co-Founder',
       image: '/assets/narotam.jpg',
     },

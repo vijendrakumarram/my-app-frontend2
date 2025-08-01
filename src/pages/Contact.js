@@ -103,12 +103,6 @@ const Contact = () => {
           {loading ? 'Sending...' : 'Send Message'}
         </button>
       </form>
-
-      <ul className="mt-10 p-5 bg-blue-50 rounded-lg text-gray-700 text-sm md:text-base space-y-3 shadow-inner">
-        <li className="flex items-center gap-2">📧 <span>Email: vijendrakumarram@gmail.com</span></li>
-        <li className="flex items-center gap-2">📞 <span>Phone: +91-8107819076</span></li>
-        <li className="flex items-center gap-2">📍 <span>Location: Jaipur, India</span></li>
-      </ul>
     </div>
   );
 };
