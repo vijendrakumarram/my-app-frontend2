@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FiGlobe, FiSmartphone, FiPlay } from "react-icons/fi";
+
 
 const Home = () => {
   return (
@@ -23,22 +25,44 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-white py-20 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:-translate-y-1 transition">
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">Web Development</h3>
-            <p className="text-gray-600 text-sm">We design and build beautiful responsive websites tailored to your business.</p>
-          </div>
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:-translate-y-1 transition">
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">App Solutions</h3>
-            <p className="text-gray-600 text-sm">Mobile apps built with performance, security, and elegance in mind.</p>
-          </div>
-          <div className="bg-white shadow-lg rounded-xl p-6 hover:-translate-y-1 transition">
-            <h3 className="text-xl font-semibold text-blue-900 mb-3">Branding</h3>
-            <p className="text-gray-600 text-sm">Logos, color palettes, and complete brand kits to give your business a unique identity.</p>
-          </div>
-        </div>
-      </section>
+<section className="bg-gradient-to-br from-blue-50 to-white py-20 px-6">
+  <div className="max-w-6xl mx-auto text-center mb-12">
+    <h2 className="text-4xl font-bold text-blue-900">What We Do</h2>
+    <p className="text-gray-600 mt-4 text-lg">Innovating Learning Through Technology</p>
+  </div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center">
+    <div className="bg-white shadow-xl rounded-2xl p-8 hover:shadow-2xl transition-all duration-300">
+      <div className="text-blue-600 text-5xl mb-5 flex justify-center">
+        <FiGlobe />
+      </div>
+      <h3 className="text-xl font-semibold text-blue-900 mb-2">Web Development</h3>
+      <p className="text-gray-600 text-sm">
+        We craft responsive, modern websites that represent your brand and goals perfectly.
+      </p>
+    </div>
+
+    <div className="bg-white shadow-xl rounded-2xl p-8 hover:shadow-2xl transition-all duration-300">
+      <div className="text-blue-600 text-5xl mb-5 flex justify-center">
+        <FiSmartphone />
+      </div>
+      <h3 className="text-xl font-semibold text-blue-900 mb-2">App Development</h3>
+      <p className="text-gray-600 text-sm">
+        Custom Android & iOS apps using the latest frameworks tailored to user needs.
+      </p>
+    </div>
+
+    <div className="bg-white shadow-xl rounded-2xl p-8 hover:shadow-2xl transition-all duration-300">
+      <div className="text-blue-600 text-5xl mb-5 flex justify-center">
+        <FiPlay />
+      </div>
+      <h3 className="text-xl font-semibold text-blue-900 mb-2">Game Development</h3>
+      <p className="text-gray-600 text-sm">
+        Immersive 2D/3D games built using Unity and Unreal Engine, designed to engage and inspire.
+      </p>
+    </div>
+  </div>
+</section>
     </div>
   );
 };
