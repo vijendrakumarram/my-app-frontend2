@@ -7,6 +7,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
+import Projects from './pages/Projects';
 //import Login from './pages/Login';
 //import Register from './pages/Register';
 
@@ -24,6 +25,7 @@ function LayoutWrapper() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio/>} />
+          <Route path="/projects" element={<Projects/>} />
           {/*<Route path="/login" element={<Login />} />*/}
           {/*<Route path="/register" element={<Register />} />*/}
         </Routes>
