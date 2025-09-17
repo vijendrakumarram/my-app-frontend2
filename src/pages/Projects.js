@@ -12,9 +12,9 @@ export default function Projects() {
         {/* Project Card */}
         <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col space-y-6">
           {/* Videos Row */}
-          <div className="flex gap-4 overflow-x-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <iframe
-              className="rounded-xl w-1/3 aspect-video"
+              className="rounded-xl w-full aspect-video"
               src="https://www.youtube.com/embed/EaLbtOWtDYk"
               title="Blaster Video 1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -22,7 +22,7 @@ export default function Projects() {
             ></iframe>
 
             <iframe
-              className="rounded-xl w-1/3 aspect-video"
+              className="rounded-xl w-full aspect-video"
               src="https://www.youtube.com/embed/a7JzDJCGCb0"
               title="Blaster Video 2"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -30,7 +30,7 @@ export default function Projects() {
             ></iframe>
 
             <iframe
-              className="rounded-xl w-1/3 aspect-video"
+              className="rounded-xl w-full aspect-video"
               src="https://www.youtube.com/embed/ZLY-ZU9wn3c"
               title="Blaster Video 3"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
