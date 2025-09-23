@@ -39,11 +39,11 @@ const Navbar = () => {
           <div className="flex items-center space-x-3">
             <Link to="/" className="flex items-center space-x-2">
               {/* Circular logo image */}
-              <img 
-                src="/assets/logo.jpg"
-                alt="Codemantra Labs Logo"
-                className="w-10 h-10 rounded-full shadow-md"  // bigger size, no border
+              <img src="/assets/logo.png" 
+                alt="Codemantra Labs Logo" 
+                className="w-14 h-14 rounded-full shadow-md" // bigger size, no border 
               />
+
               {/* Brand name */}
               <span className="text-2xl font-bold tracking-wide hover:text-red-300 transition">
                 Codemantra Labs
