@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+//import Logo from '/assets/logo.jpg'; // <-- adjust the path if needed
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,10 +34,20 @@ const Navbar = () => {
     <nav className="bg-blue-700 text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold tracking-wide hover:text-red-300 transition">
-              Codemantralabs
+          
+          {/* Logo with circular image */}
+          <div className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center space-x-2">
+              {/* Circular logo image */}
+              <img 
+                src="/assets/logo.jpg"
+                alt="Codemantra Labs Logo"
+                className="w-10 h-10 rounded-full shadow-md"  // bigger size, no border
+              />
+              {/* Brand name */}
+              <span className="text-2xl font-bold tracking-wide hover:text-red-300 transition">
+                Codemantra Labs
+              </span>
             </Link>
           </div>
 
