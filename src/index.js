@@ -8,19 +8,41 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // Show loader immediately
 root.render(
-  <div className="fixed inset-0 z-[9999] flex min-h-screen items-center justify-center bg-slate-950 text-white">
+  <div
+    className="fixed inset-0 z-[9999] flex min-h-screen items-center justify-center"
+    style={{
+      backgroundColor: "#0f172a",
+      color: "#ffffff",
+    }}
+  >
     <div className="flex flex-col items-center justify-center text-center">
 
-      {/* Logo / Website Name */}
-      <h2 className="mb-6 text-2xl font-semibold tracking-wide">
+      {/* Website Name */}
+      <h2
+        className="mb-6 text-2xl font-semibold tracking-wide"
+        style={{
+          color: "#ffffff",
+        }}
+      >
         CodeMantra Labs
       </h2>
 
       {/* Spinner */}
-      <div className="h-10 w-10 animate-spin rounded-full border-4 border-slate-700 border-t-blue-500"></div>
+      <div
+        className="h-10 w-10 animate-spin rounded-full"
+        style={{
+          border: "4px solid #334155",
+          borderTop: "4px solid #3b82f6",
+        }}
+      ></div>
 
       {/* Loading Message */}
-      <p className="mt-5 text-sm text-slate-400">
+      <p
+        className="mt-5 text-sm"
+        style={{
+          color: "#94a3b8",
+        }}
+      >
         Please wait...
       </p>
 
@@ -50,13 +72,23 @@ fetch(`${BASE_URL}/`)
     console.error("⚠️ Backend Connection Error:", error.message);
 
     root.render(
-      <div className="flex min-h-screen items-center justify-center px-5 text-center">
-        <div className="text-red-500">
+      <div
+        className="flex min-h-screen items-center justify-center px-5 text-center"
+        style={{
+          backgroundColor: "#0f172a",
+        }}
+      >
+        <div style={{ color: "#ef4444" }}>
           <p className="text-2xl font-semibold">
             ❌ Backend server is not running or unreachable.
           </p>
 
-          <p className="mt-3 text-sm">
+          <p
+            className="mt-3 text-sm"
+            style={{
+              color: "#94a3b8",
+            }}
+          >
             {error.message}
           </p>
         </div>
