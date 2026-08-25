@@ -8,19 +8,19 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // Show loader immediately
 root.render(
-  <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black text-white">
-    <div className="text-center">
+  <div className="fixed inset-0 z-[9999] flex min-h-screen items-center justify-center bg-slate-950 text-white">
+    <div className="flex flex-col items-center justify-center text-center">
 
-      {/* Website Name */}
-      <h2 className="mb-6 text-2xl font-semibold">
+      {/* Logo / Website Name */}
+      <h2 className="mb-6 text-2xl font-semibold tracking-wide">
         CodeMantra Labs
       </h2>
 
       {/* Spinner */}
-      <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-white/20 border-t-white"></div>
+      <div className="h-10 w-10 animate-spin rounded-full border-4 border-slate-700 border-t-blue-500"></div>
 
-      {/* Message */}
-      <p className="mt-5 text-sm text-white/70">
+      {/* Loading Message */}
+      <p className="mt-5 text-sm text-slate-400">
         Please wait...
       </p>
 
