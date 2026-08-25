@@ -7,44 +7,77 @@ import BASE_URL from "./api/apiConfig";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // Show loader immediately
+// Show premium loader immediately
 root.render(
   <div
     className="fixed inset-0 z-[9999] flex min-h-screen items-center justify-center"
     style={{
-      backgroundColor: "#0f172a",
-      color: "#ffffff",
+      background:
+        "radial-gradient(circle at center, #172554 0%, #0f172a 45%, #020617 100%)",
     }}
   >
     <div className="flex flex-col items-center justify-center text-center">
 
-      {/* Website Name */}
+      {/* Logo / Brand */}
+      <div className="relative mb-8">
+
+        {/* Outer Glow */}
+        <div
+          className="absolute inset-0 animate-pulse rounded-full blur-2xl"
+          style={{
+            backgroundColor: "rgba(59, 130, 246, 0.25)",
+          }}
+        ></div>
+
+        {/* Spinner */}
+        <div
+          className="relative h-16 w-16 animate-spin rounded-full"
+          style={{
+            border: "3px solid rgba(255,255,255,0.08)",
+            borderTop: "3px solid #60a5fa",
+            borderRight: "3px solid #3b82f6",
+            boxShadow: "0 0 25px rgba(59,130,246,0.35)",
+          }}
+        ></div>
+
+        {/* Inner Ring */}
+        <div
+          className="absolute inset-2 rounded-full"
+          style={{
+            border: "1px solid rgba(96,165,250,0.25)",
+          }}
+        ></div>
+      </div>
+
+      {/* Brand Name */}
       <h2
-        className="mb-6 text-2xl font-semibold tracking-wide"
+        className="text-2xl font-semibold tracking-[0.15em]"
         style={{
           color: "#ffffff",
+          textShadow: "0 0 20px rgba(96,165,250,0.25)",
         }}
       >
         CodeMantra Labs
       </h2>
 
-      {/* Spinner */}
-      <div
-        className="h-10 w-10 animate-spin rounded-full"
-        style={{
-          border: "4px solid #334155",
-          borderTop: "4px solid #3b82f6",
-        }}
-      ></div>
-
       {/* Loading Message */}
-      <p
-        className="mt-5 text-sm"
-        style={{
-          color: "#94a3b8",
-        }}
-      >
-        Please wait...
-      </p>
+      <div className="mt-4 flex items-center gap-1">
+        <p
+          className="text-sm tracking-wide"
+          style={{
+            color: "#94a3b8",
+          }}
+        >
+          Please wait
+        </p>
+
+        <span
+          className="animate-pulse"
+          style={{ color: "#60a5fa" }}
+        >
+          ...
+        </span>
+      </div>
 
     </div>
   </div>
